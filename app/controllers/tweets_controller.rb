@@ -40,6 +40,14 @@ class TweetsController < ApplicationController
     # @tweet = Tweet.find(params[:id])
   end
   
+  def destroy
+    if @tweet.destroy
+      redirect_to tweets_url, notice: 'Tweet destroyed'
+    else
+      flash.now[:alert] = 'Something went wrong. No destruction for you.'
+    end
+  end
+  
   private
   
   # WHITELIST
