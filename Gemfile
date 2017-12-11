@@ -70,6 +70,7 @@ group :development, :test do
   
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'annotate'
   
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
